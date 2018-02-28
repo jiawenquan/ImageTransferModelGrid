@@ -54,7 +54,7 @@ public class PictureGridWindow : EditorWindow
     
     private void OnGUI()
     {
-
+        this.ShowNotification(new GUIContent("请先勾选为图片Inspector 的\"Read/Write Enabled\""));
         //switch (errorMessage)
         //{
         //    case ErrorMessage.None:
@@ -76,7 +76,7 @@ public class PictureGridWindow : EditorWindow
         buttonStyle.fontStyle = FontStyle.Bold;
         if (heightMap==null)
         {
-            
+            this.ShowNotification(new GUIContent("请先勾选为图片Inspector 的\"Read/Write Enabled\""));
         }
         if (GUILayout.Button("图片转模型网格", buttonStyle, GUILayout.Height(50))&&heightMap!=null)
         {
